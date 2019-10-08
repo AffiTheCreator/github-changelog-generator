@@ -212,7 +212,7 @@ module GitHubChangelogGenerator
                else
                  issue["labels"].select { |label| @options[:issue_line_labels].include?(label["name"]) }
                end
-      labels.map { |label| " \[[#{label['name']}](#{label['url'].sub('api.github.com/repos', 'github.com')})\]" }.join("")
+      labels.map { |label| " \[[#{label['name']}](#{label['url'].sub('api.github.com/', 'github.com')})\]" }.join("")
     end
   end
 end
